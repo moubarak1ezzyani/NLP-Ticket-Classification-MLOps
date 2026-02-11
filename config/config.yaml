@@ -1,0 +1,14 @@
+# Pipeline Configuration
+
+data:
+  raw_path: "data/raw/"
+  processed_path: "data/processed/"
+  chromadb_path: "data/chromadb/"
+
+model:
+  name: "sentence-transformers/all-MiniLM-L6-v2"
+  batch_size: 32
+  epochs: 10
+
+monitoring:
+  drift_report_path: "reports/evidently_drift.html"

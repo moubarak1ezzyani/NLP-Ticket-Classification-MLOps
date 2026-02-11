@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nlp-pipeline
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nlp-pipeline
+  template:
+    metadata:
+      labels:
+        app: nlp-pipeline
+    spec:
+      containers:
+      - name: nlp-pipeline
+        image: nlp-pipeline:latest
+        envFrom:
+        - configMapRef:
+            name: nlp-configmap

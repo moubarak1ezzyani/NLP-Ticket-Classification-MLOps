@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nlp-configmap
+data:
+  MODEL_NAME: "sentence-transformers/all-MiniLM-L6-v2"
+  DATA_PATH: "/app/data"
