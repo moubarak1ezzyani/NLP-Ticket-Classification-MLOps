@@ -1,24 +1,21 @@
-# Requirements for NLP Ticket Classification
-
-# NLP
+# NLP & Text Processing
 spacy
 nltk
 transformers
 sentence-transformers
 
-# Data & DB
+# Data Science
 pandas
 numpy
+scikit-learn
+
+# Vector Database
 chromadb
 
-# ML
-scikit-learn
+# MLOps & Monitoring
 evidently
+prometheus-client
 
-# Orchestration & Ops
+# Utilities
 pyyaml
 python-dotenv
-prom-client
-
-# Testing
-pytest
