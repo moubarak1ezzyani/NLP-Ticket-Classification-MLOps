@@ -112,3 +112,17 @@ Je te conseille de suivre cet ordre pour remplir tes dossiers :
 4. **Docker :** Une fois que `python src/main.py` fonctionne, écris le `Dockerfile`.
 
 Veux-tu que je t'aide à rédiger le fichier `requirements.txt` avec les bonnes bibliothèques pour ce projet ?
+
+***
+Branche,Étape du projet,Objectif
+`feature/eda-preprocessing`,Étape 1,"Nettoyage des données, analyse et script `preprocessing.py`."
+***
+`feature/embeddings-vector-db`,Étape 2,Intégration de Hugging Face et configuration de ChromaDB.
+***
+`feature/classification-model`,Étape 3,Entraînement du modèle Scikit-learn et sauvegarde du .pkl.
+***
+`feature/ml-monitoring`,Étape 5,Implémentation d'Evidently AI pour le Data Drift.
+***
+`feature/docker-k8s`,Étape 6,Création du Dockerfile et des manifests Kubernetes.
+***
+`feature/infra-monitoring`,Étape 7,Configuration Prometheus et Grafana.
