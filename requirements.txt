@@ -8,6 +8,8 @@ sentence-transformers
 pandas
 numpy
 scikit-learn
+matplotlib
+seaborn
 
 # Vector Database
 chromadb
