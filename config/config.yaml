@@ -1,18 +1,20 @@
+
 # Pipeline Configuration
 
 data:
   raw_path: "data/raw/nlp_da.csv"
-  processed_path: "data/processed/tickets_cleaned.csv"
-
-chromadb:
-  persist_directory: "data/chromadb"
-  collection_name: "ticket_embeddings"
+  processed_path: "data/processed/"
+  chromadb_path: "data/chromadb"
 
 nlp:
   embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
 
-# Training part will be in model branch
-model:
-  name: "sentence-transformers/all-MiniLM-L6-v2"
-  batch_size: 32
-  epochs: 10
+chromadb:
+  persist_directory: "./data/chromadb"
+  collection_name: "ticket_embeddings"
+
+# Step 3 (Training) configuration
+training:
+  model_save_path: "data/processed/ticket_model.joblib"
+  test_size: 0.2
+  random_state: 42

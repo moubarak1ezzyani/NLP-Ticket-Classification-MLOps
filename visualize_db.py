@@ -10,7 +10,7 @@ def visualize_results():
     print("--- ChromaDB Visualization [Functional] ---")
     
     config = load_config()
-    db_path = "./data/chromadb"
+    db_path = config['chromadb']['persist_directory']
     model_name = config['nlp']['embedding_model']
     collection_name = config['chromadb']['collection_name']
 

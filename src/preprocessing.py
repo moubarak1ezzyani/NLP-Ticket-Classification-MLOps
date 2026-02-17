@@ -12,12 +12,6 @@ except OSError:
     nlp = spacy.load("en_core_web_sm")
 
 def clean_text(text):
-    """
-    NLP Cleaning (Functional approach):
-    1. Lowercase normalization
-    2. Punctuation and special character removal
-    3. Tokenization & Stopwords removal (via SpaCy)
-    """
     if not isinstance(text, str):
         return ""
     
@@ -27,7 +21,7 @@ def clean_text(text):
     # 2. Punctuation and special character removal
     text = re.sub(r'[^a-z0-9\s]', '', text)
     
-    # 3. Tokenization & Stopwords removal with SpaCy
+    # 3. Tokenization & Stopwords removal - SpaCy
     doc = nlp(text)
     tokens = [token.text for token in doc if not token.is_stop and token.text.strip()]
     
