@@ -1,14 +1,18 @@
-# Pipeline Configuration
+# # Pipeline Configuration
 
-data:
-  raw_path: "data/raw/"
-  processed_path: "data/processed/"
-  chromadb_path: "data/chromadb/"
+# data:
+#   raw_path: "data/raw/nlp_da.csv"
+#   processed_path: "data/processed/"
+#   chromadb_path: "data/chromadb"
 
-model:
-  name: "sentence-transformers/all-MiniLM-L6-v2"
-  batch_size: 32
-  epochs: 10
+# nlp:
+#   embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
 
-monitoring:
-  drift_report_path: "reports/evidently_drift.html"
+# chromadb:
+#   persist_directory: "./data/chromadb"
+#   collection_name: "ticket_embeddings"
+
+# training:
+#   model_save_path: "data/processed/ticket_model.joblib"
+#   test_size: 0.2
+#   random_state: 42
