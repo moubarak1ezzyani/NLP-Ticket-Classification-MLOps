@@ -1,0 +1,40 @@
+
+# Version Control
+.git/
+.gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Environment Variables
+.env
+
+# Data (Allow specific files if needed, but generally ignore large data)
+# For this specific project, allow raw data if we want to bake it in, otherwise ignore
+# data/
+# Usually we ignore data and mount it, but for simplicity here I'll check what user wants
+# User asked for "reproductible pipeline", baking small data is easiest.
+# But generally we ignore data/processed, data/chromadb
+data/processed/
+data/chromadb/

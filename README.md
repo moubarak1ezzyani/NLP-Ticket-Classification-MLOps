@@ -123,6 +123,6 @@ Branche,Étape du projet,Objectif
 ***
 `feature/ml-monitoring`,Étape 5,Implémentation d'Evidently AI pour le Data Drift.
 ***
-`feature/docker-k8s`,Étape 6,Création du Dockerfile et des manifests Kubernetes.
+`infra/docker-k8s`,Étape 6,Création du Dockerfile et des manifests Kubernetes.
 ***
-`feature/infra-monitoring`,Étape 7,Configuration Prometheus et Grafana.
+`ops/infra-monitoring`,Étape 7,Configuration Prometheus et Grafana.

@@ -1,14 +1,24 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: nlp-periodic-task
+  name: nlp-ticket-classification-cronjob
 spec:
-  schedule: "0 0 * * *"
+  schedule: "0 2 * * *"  # Run every day at 2:00 AM
   jobTemplate:
     spec:
       template:
         spec:
           containers:
           - name: nlp-pipeline
-            image: nlp-pipeline:latest
+            image: nlp-ticket-classification:latest
+            imagePullPolicy: IfNotPresent
+            # If using external registry, change to Always
+            command: ["python", "src/main.py"]
+            resources:
+              requests:
+                memory: "512Mi"
+                cpu: "500m"
+              limits:
+                memory: "1Gi"
+                cpu: "1000m"
           restartPolicy: OnFailure
